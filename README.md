@@ -19,6 +19,8 @@ pip install -r requirements.txt
 # Pruebas
 Los ficheros en la carpeta raiz tiene todos un punto de entrada en la función main, desde se podrá llamar a la función runTrain, runPlay o runSample. Para arrancar un entrenamiento se deberá llamar a runTrain indicando el numero de episodios y el tamañao máximo de pasos para cada uno de ellos. En cada una de estas funciones se puede ver el directorio donde se guardará tanto el modelo como los graficos que muestran la evolución del entrenamiento. Para probar el modelo obtenido se puede hacer con runPlay, indicando la subcarpeta donde se ha generado la información.
 
+Podemos lanzar los entrenamiento como por ejemplo: python mario-dql.py
+
 # Resultados
 <section markdown="1" style="display: flex;">
   <img src="videos/frozen%20lake.gif" width="240" height="240"/>
