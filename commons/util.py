@@ -38,9 +38,9 @@ def train(episodies: int, steps: int, env: Env, alg: Algorithms, directory: str,
             logger.report_evaluation(e, avg_reward, best_score)
             if avg_reward >= best_score:
                 best_score = avg_reward
-                alg.save()
+                alg.save("partial")
 
-    alg.save()
+    alg.save("final")
 
     env.close()
     logger.closeWritter()
@@ -64,30 +64,28 @@ def evaluate(steps: int, env: Env, alg: Algorithms, episodies, updateReward: cal
             state = next_state
 
         total_reward += episody_reward
-#        print(f"Evaluación episodio {e} con recompensa de {episody_reward}");
+        print(f"Evaluación episodio {e} con recompensa de {episody_reward}");
     alg.epsilon = epsilon
 
     return total_reward / episodies
 
-def play(env:Env, alg:Algorithms, record=False):
+def play(env:Env, alg:Algorithms, screen_size=None):
     state = env.reset()
     done = False
 
-    if record:
-        height, width, layers = env.render(mode="rgb_array").shape
-        out = cv2.VideoWriter('video.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 30, (width, height))
+    if screen_size:
+        print(screen_size)
+        out = cv2.VideoWriter('video.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 30, screen_size)
 
     while(not done):
         action = alg.action(state)
         state,reward,done,info = env.step(action)
 
-        if record:
-            frame = env.render(mode="rgb_array")
+        frame = env.render()
+        if screen_size:
             out.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
-        else:
-            env.render()
 
-    if record:
+    if screen_size:
         out.release()
 
     env.close()

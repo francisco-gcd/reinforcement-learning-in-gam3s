@@ -87,11 +87,11 @@ class DQLearning(Algorithms):
     def next_episody(self):
         return
 
-    def save(self):
-        torch.save(self.q_network.state_dict(), self.directory + f"/model-dql-{self.steps}.pkl")
+    def save(self, label):
+        torch.save(self.q_network.state_dict(), self.directory + f"/model-dql-{label}.pkl")
 
-    def load(self, step):
-        state_dict = torch.load(self.directory + f"/model-dql-{step}.pkl")
+    def load(self, label):
+        state_dict = torch.load(self.directory + f"/model-dql-{label}.pkl")
         self.q_network.load_state_dict(state_dict)
 
     def __optimize(self, mini_batch):

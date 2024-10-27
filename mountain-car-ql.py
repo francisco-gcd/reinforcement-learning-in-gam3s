@@ -2,11 +2,11 @@ import gym
 import datetime
 
 from commons.algorithms.ql import QLearning
-from commons.util import train, play, sample
+from commons.util import train, play, sample, evaluate
 from commons.wrappers.discretize import DiscretizeWrapper
 
 def runTrain(episodies, steps):
-    directory = "games/mountain-car/prueba/{0}/" + str(datetime.datetime.now().strftime('%Y%m%d%H%M'))
+    directory = "games/mountain-car/experimento 3.1/{0}/" + str(datetime.datetime.now().strftime('%Y%m%d%H%M'))
     env = gym.make('MountainCar-v0')
     env = DiscretizeWrapper(env, 40)
     ql = QLearning(
@@ -24,9 +24,9 @@ def runTrain(episodies, steps):
 
 
 def runPlay(subfolder, step):
-    directory = "games/mountain-car/experimento 3/{0}/" + subfolder
+    directory = "games/mountain-car/experimento 3.1/{0}/" + subfolder
     env = gym.make('MountainCar-v0')
-    env = DiscretizeWrapper(env, 10)
+    env = DiscretizeWrapper(env, 40)
     ql = QLearning(
         directory = directory,
         observation_space = env.dimensions(),
@@ -35,6 +35,20 @@ def runPlay(subfolder, step):
 
     ql.load(step)
     play(env, ql)
+
+def runEvaluate(subfolder, step):
+    directory = "games/mountain-car/experimento 3.1/{0}/" + subfolder
+    env = gym.make('MountainCar-v0')
+    env = DiscretizeWrapper(env, 40)
+    ql = QLearning(
+        directory = directory,
+        observation_space = env.dimensions(),
+        action_space = env.action_space.n,
+    )
+
+    ql.load(step)
+    avg_reward = evaluate(-1, env, ql, 10, updateReward)
+    print(f"Evaluación Media {avg_reward} de los 10 episodios")
 
 def runSample():
     env = gym.make('MountainCar-v0')
@@ -47,5 +61,6 @@ def updateReward(step,state,reward,done,info) :
 
 if __name__ == '__main__':
     #runSample()
-    runTrain(200000, max_steps)
-    #runPlay("202410261255", 1493698)
+    #runTrain(200000, max_steps)
+    runPlay("202410261742", 32757536)
+    #runEvaluate("202410261742", 32757536)

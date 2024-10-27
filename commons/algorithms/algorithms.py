@@ -15,9 +15,9 @@ class Algorithms(ABC):
         pass
 
     @abstractmethod
-    def save(self, avg_reward):
+    def save(self, label):
         pass
 
     @abstractmethod
-    def load(self, step):
+    def load(self, label):
         pass    

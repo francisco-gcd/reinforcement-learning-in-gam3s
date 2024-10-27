@@ -131,6 +131,9 @@ def runTrain(episodies, steps):
 def runPlay():
     directory="games/mario/experimento 6/{0}/202410160031"
     env = gym_super_mario_bros.make('SuperMarioBros-1-1-v0')
+    
+
+
     env = JoypadSpace(env, [['right'], ['right', 'A']])
 
     env = TransformObservation(env, f=processImage)
@@ -145,7 +148,7 @@ def runPlay():
     )
 
     dql.load(3458898)
-    actions = play(env, dql)
+    play(env, dql)
     
 
 def runSample():

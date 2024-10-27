@@ -52,13 +52,13 @@ class QLearning(Algorithms):
         self.epsilon = self.epsilon - self.epsilon_decay
         self.epsilon = max(self.epsilon, self.epsilon_min)
 
-    def save(self):
-        f = open(self.directory + f"/model-ql-{self.steps}.pkl","wb")
+    def save(self, label):
+        f = open(self.directory + f"/model-ql-{label}.pkl","wb")
         pickle.dump(self.qtable, f)
         f.close()
 
-    def load(self, step):
-        f = open(self.directory + f"/model-ql-{step}.pkl","rb")
+    def load(self, label):
+        f = open(self.directory + f"/model-ql-{label}.pkl","rb")
         self.qtable = pickle.load(f)
 
         f.close()
