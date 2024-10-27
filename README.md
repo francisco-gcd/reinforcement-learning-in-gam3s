@@ -7,8 +7,10 @@ El proyecto se organiza en las siguientes carpetas:
 
 
 
-# Resultados de los agentes entrenados
-![](https://github.com/francisco-gcd/reinforcement-learning-in-gam3s/blob/main/videos/frozen%20lake.gif)
-![](https://github.com/francisco-gcd/reinforcement-learning-in-gam3s/blob/main/videos/mountain%20car.gif)
-![](https://github.com/francisco-gcd/reinforcement-learning-in-gam3s/blob/main/videos/pong.gif)
-![](https://github.com/francisco-gcd/reinforcement-learning-in-gam3s/blob/main/videos/mario.gif)
+# Resultados
+<section markdown="1" style="display: flex;">
+  <img src="videos/frozen%20lake.gif" width="240" height="240"/>
+  <img src="videos/mountain%20car.gif" width="240" height="240"/>
+  <img src="videos/pong.gif" width="240" height="240"/>
+  <img src="videos/mario.gif" width="240" height="240"/>
+</section>
