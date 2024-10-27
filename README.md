@@ -4,3 +4,11 @@ El siguiente repositorio tiene la implementación realizada para el TFM con mism
 # Estructura y Organización
 El proyecto se organiza en las siguientes carpetas:
 * 
+
+
+
+# Resultados de los agentes entrenados
+![](https://github.com/francisco-gcd/reinforcement-learning-in-gam3s/blob/main/videos/frozen%20lake.gif)
+![](https://github.com/francisco-gcd/reinforcement-learning-in-gam3s/blob/main/videos/mountain%20car.gif)
+![](https://github.com/francisco-gcd/reinforcement-learning-in-gam3s/blob/main/videos/pong.gif)
+![](https://github.com/francisco-gcd/reinforcement-learning-in-gam3s/blob/main/videos/mario.gif)
