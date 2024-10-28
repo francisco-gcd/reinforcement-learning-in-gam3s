@@ -23,10 +23,10 @@ Podemos lanzar los entrenamiento como por ejemplo: python mario-dql.py
 
 # Resultados
 <section markdown="1" style="display: flex;">
-  <img src="videos/frozen%20lake.gif" width="240" height="240"/>
-  <img src="videos/mountain%20car.gif" width="240" height="240"/>
-  <img src="videos/pong.gif" width="240" height="240"/>
-  <img src="videos/mario.gif" width="240" height="240"/>
+  <img src="videos/frozen%20lake.gif" width="200" height="200"/>
+  <img src="videos/mountain%20car.gif" width="200" height="200"/>
+  <img src="videos/pong.gif" width="200" height="200"/>
+  <img src="videos/mario.gif" width="200" height="200"/>
 </section>
 
 ###### Nota
