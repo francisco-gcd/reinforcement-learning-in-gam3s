@@ -64,7 +64,7 @@ def evaluate(steps: int, env: Env, alg: Algorithms, episodies, updateReward: cal
             state = next_state
 
         total_reward += episody_reward
-        print(f"Evaluación episodio {e} con recompensa de {episody_reward}");
+#        print(f"Evaluación episodio {e} con recompensa de {episody_reward}")
     alg.epsilon = epsilon
 
     return total_reward / episodies

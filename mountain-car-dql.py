@@ -9,15 +9,15 @@ from commons.util import train, play, sample, evaluate
 def runTrain(episodies, steps):
     directory = "games/mountain-car/experimento 4.2/{0}/" + str(datetime.datetime.now().strftime('%Y%m%d%H%M'))
     env = gym.make('MountainCar-v0')
-    env = DiscretizeWrapper(env, 15)
+    env = DiscretizeWrapper(env, 20)
     network = LinealNetwork2(env.observation_space.shape[0], 32, env.action_space.n)
     dql = DQLearning(
         directory = directory,
         network = network,
         network_updated = 5000,
-        lr = 0.00001, 
+        lr = 0.0001,
         gamma = 0.9, 
-        epsilon_updated = 15000,
+        epsilon_updated = 200000,
         epsilon_max = 1, 
         epsilon_min = 0.02, 
         epsilon_decay = 0.01,
@@ -42,9 +42,9 @@ def runPlay(subfolder, step):
     play(env, dql)
 
 def runEvaluate(subfolder, step):
-    directory = "games/mountain-car/experimento 4.1/{0}/" + subfolder
+    directory = "games/mountain-car/experimento 4.2/{0}/" + subfolder
     env = gym.make('MountainCar-v0')
-    env = DiscretizeWrapper(env, 10)
+    env = DiscretizeWrapper(env, 15)
     network = LinealNetwork2(env.observation_space.shape[0], 32, env.action_space.n)
     dql = DQLearning(
         directory = directory,
@@ -67,6 +67,6 @@ def updateReward(step,state,reward,done,info) :
 
 if __name__ == '__main__':
     #runSample()
-    #runTrain(20000, max_steps)
+    runTrain(30000, max_steps)
     #runPlay("202410250641", 1687930)
-    runEvaluate("202410250640", 3817724)
+    #runEvaluate("202410271630", "partial")
