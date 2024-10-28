@@ -30,4 +30,4 @@ Podemos lanzar los entrenamiento como por ejemplo: python mario-dql.py
 </section>
 
 ###### Nota
-El codigo realizado en este proyecto está pendiente de mejora. Por falta de tiempo y teniendo como premisa la obtención de resultados se a dejado de lado el rigor a la hora de la implementación, habiendo carencias que deberían ser solucionadas. Gracias por la compresión.
+El codigo realizado en este proyecto está pendiente de mejora. Por falta de tiempo y teniendo como premisa la obtención de resultados se ha dejado de lado el rigor a la hora de la implementación, habiendo carencias que deberían ser solucionadas. Gracias por la compresión.
