@@ -6,7 +6,6 @@ El proyecto se organiza en las siguientes carpetas:
 
 * Carpeta raiz: tendrá el codigo con las funciones necesarias para entrenar los agentes.
 * Carpeta videos: se muestran los resultados en formato de gif y mp4.
-* Carpeta games: tiene los modelos obtenidos para cada experimento y los resultados en tensorboard.
 * Carpeta documentación: tiene el TFM relacionado con este repositorio.
 * Carpeta commons: contiene en una plantilla con el funcionamiento general de un algoritmo de aprendizaje por refuerzo y la clase encargada de generar los informes de resultados.
 * Caperta commons / algorithms: contiene la implementación concreta de los algoritmos de Q Learning y Deep Q Learning.
@@ -20,6 +19,8 @@ pip install -r requirements.txt
 Los ficheros en la carpeta raiz tiene todos un punto de entrada en la función main, desde se podrá llamar a la función runTrain, runPlay o runSample. Para arrancar un entrenamiento se deberá llamar a runTrain indicando el numero de episodios y el tamañao máximo de pasos para cada uno de ellos. En cada una de estas funciones se puede ver el directorio donde se guardará tanto el modelo como los graficos que muestran la evolución del entrenamiento. Para probar el modelo obtenido se puede hacer con runPlay, indicando la subcarpeta donde se ha generado la información.
 
 Podemos lanzar los entrenamiento como por ejemplo: python mario-dql.py
+
+En el siguiente enlace se encuentra el fichero <a href="https://drive.google.com/file/d/1RqSP2Ba3lo6GUCIVgovetAzrxg7Z0Vp0/view?usp=sharing">games.zip</a> que contiene los tableros generados por tensorboard y los modelos de los agentes obtenidos. Para su uso descomprimir en el mismo directorio que se clona el repositorio.
 
 # Resultados
 <section markdown="1" style="display: flex;">
