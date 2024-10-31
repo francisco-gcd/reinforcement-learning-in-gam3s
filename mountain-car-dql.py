@@ -17,7 +17,7 @@ def runTrain(episodies, steps):
         network_updated = 5000,
         lr = 0.0001,
         gamma = 0.9, 
-        epsilon_updated = 200000,
+        epsilon_updated = 20000,
         epsilon_max = 1, 
         epsilon_min = 0.02, 
         epsilon_decay = 0.01,
