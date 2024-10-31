@@ -36,8 +36,6 @@ def runTrain(episodies, steps):
 
 def runPlay(subfolder, step):
     directory="games/pong/experimento 5/{0}/" + subfolder
-    #env = gym.make('PongNoFrameskip-v4', render_mode='rgb_array')
-    #screen_size = env.observation_space.shape
 
     env = gym.make('PongNoFrameskip-v4', render_mode='human')
     env = TransformObservation(env, f=processImage)
@@ -50,7 +48,6 @@ def runPlay(subfolder, step):
     )
 
     dql.load(step)
-    #play(env, dql, (screen_size[1], screen_size[0]))
     play(env, dql)
 
 def runSample():
