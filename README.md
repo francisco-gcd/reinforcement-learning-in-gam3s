@@ -20,7 +20,7 @@ Los ficheros en la carpeta raiz tiene todos un punto de entrada en la función m
 
 Podemos lanzar los entrenamiento como por ejemplo: python mario-dql.py
 
-En el siguiente enlace se encuentra el fichero <a href="https://drive.google.com/file/d/1RqSP2Ba3lo6GUCIVgovetAzrxg7Z0Vp0/view?usp=sharing">games.zip</a> que contiene los tableros generados por tensorboard y los modelos de los agentes obtenidos. Para su uso descomprimir en el mismo directorio que se clona el repositorio.
+En el siguiente enlace se encuentra el fichero <a href="https://drive.usercontent.google.com/download?id=1RqSP2Ba3lo6GUCIVgovetAzrxg7Z0Vp0&export=download&authuser=0" target="_blank">games.zip</a> que contiene los tableros generados por tensorboard y los modelos de los agentes obtenidos. Para su uso descomprimir en el mismo directorio que se clona el repositorio.
 
 # Resultados
 <section markdown="1" style="display: flex;">
