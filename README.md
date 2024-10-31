@@ -33,6 +33,3 @@ En el siguiente enlace se encuentra el fichero <a href="https://drive.userconten
   <img src="videos/pong.gif" width="200" height="200"/>
   <img src="videos/mario.gif" width="200" height="200"/>
 </section>
-
-###### Nota
-El codigo realizado en este proyecto está pendiente de mejora. Por falta de tiempo y teniendo como premisa la obtención de resultados se ha dejado de lado el rigor a la hora de la implementación, habiendo carencias que deberían ser solucionadas. Gracias por la compresión.
