@@ -79,9 +79,6 @@ def processImage(x):
 
     return binary
 
-player_one_points = 0
-player_two_points = 0
-
 max_steps = 1000
 def updateReward(step,state,reward,done,info) : 
     return reward
