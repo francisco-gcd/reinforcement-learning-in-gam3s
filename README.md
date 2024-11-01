@@ -13,7 +13,8 @@ El proyecto se organiza en las siguientes carpetas:
 * Caperta commons / wrappers: contiene los envoltorios que se utilizan para algunos entornos de OpenAI Gym
 
 # Instalación
-Se deberá tener instalado miniconda, el cual podemos encontrar en <a href="https://docs.anaconda.com/miniconda/">miniconda</a>
+Se deberá tener instalado miniconda, el cual podemos encontrar en <a href="https://docs.anaconda.com/miniconda/">miniconda</a>.
+
 Descargar e instalar el directorio raiz el fichero <a href="https://drive.usercontent.google.com/download?id=1RqSP2Ba3lo6GUCIVgovetAzrxg7Z0Vp0&export=download&authuser=0">games.zip</a>
 
 ```
