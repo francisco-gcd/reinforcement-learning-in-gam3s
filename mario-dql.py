@@ -92,4 +92,4 @@ def updateReward(step,state,reward,done,info) :
 if __name__ == '__main__':
     #runSample()
     #runTrain(15000, max_steps)
-    runPlay('202410220649', 5125120)
+    runPlay('202410160031', 3458898)
