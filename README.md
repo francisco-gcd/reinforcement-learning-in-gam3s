@@ -13,6 +13,8 @@ El proyecto se organiza en las siguientes carpetas:
 * Caperta commons / wrappers: contiene los envoltorios que se utilizan para algunos entornos de OpenAI Gym
 
 # Instalación
+Se deberá tener instalado miniconda, el cual podemos encontrar en <a href="https://docs.anaconda.com/miniconda/">miniconda</a>
+
 ```
 conda create -p ./conda python=3.10
 pip install torch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 --index-url https://download.pytorch.org/whl/cu121
