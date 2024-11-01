@@ -6,7 +6,7 @@ from commons.util import train, play, sample, evaluate
 from commons.wrappers.discretize import DiscretizeWrapper
 
 def runTrain(episodies, steps):
-    directory = "games/mountain-car/experimento 3.1/{0}/" + str(datetime.datetime.now().strftime('%Y%m%d%H%M'))
+    directory = "games/mountain-car/experimento 3.2/{0}/" + str(datetime.datetime.now().strftime('%Y%m%d%H%M'))
     env = gym.make('MountainCar-v0')
     env = DiscretizeWrapper(env, 40)
     ql = QLearning(
@@ -24,7 +24,7 @@ def runTrain(episodies, steps):
 
 
 def runPlay(subfolder, step):
-    directory = "games/mountain-car/experimento 3.1/{0}/" + subfolder
+    directory = "games/mountain-car/experimento 3.2/{0}/" + subfolder
     env = gym.make('MountainCar-v0')
     env = DiscretizeWrapper(env, 40)
     ql = QLearning(
@@ -37,7 +37,7 @@ def runPlay(subfolder, step):
     play(env, ql)
 
 def runEvaluate(subfolder, step):
-    directory = "games/mountain-car/experimento 3.1/{0}/" + subfolder
+    directory = "games/mountain-car/experimento 3.2/{0}/" + subfolder
     env = gym.make('MountainCar-v0')
     env = DiscretizeWrapper(env, 40)
     ql = QLearning(
