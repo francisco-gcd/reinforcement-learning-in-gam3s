@@ -68,5 +68,5 @@ def updateReward(step,state,reward,done,info) :
 if __name__ == '__main__':
     #runSample()
     #runTrain(30000, max_steps)
-    #runPlay("202410281844", "partial")
-    runEvaluate("202410281844", "partial")
+    runPlay("202410281844", "partial")
+    #runEvaluate("202410281844", "partial")
