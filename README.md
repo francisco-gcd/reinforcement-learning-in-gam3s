@@ -14,6 +14,8 @@ El proyecto se organiza en las siguientes carpetas:
 
 # Instalación
 ```
+conda create -p ./conda python=3.10
+pip install torch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
 ```
 # Pruebas
@@ -21,7 +23,10 @@ Los ficheros en la carpeta raiz tiene todos un punto de entrada en la función m
 
 Podemos lanzar los entrenamiento como por ejemplo: 
 ```
+...
+python pong-dql.py
 python mario-dql.py
+...
 ```
 
 En el siguiente enlace se encuentra el fichero <a href="https://drive.usercontent.google.com/download?id=1RqSP2Ba3lo6GUCIVgovetAzrxg7Z0Vp0&export=download&authuser=0" target="_blank">games.zip</a> que contiene los tableros generados por tensorboard y los modelos de los agentes obtenidos. Para su uso descomprimir en el mismo directorio que se clona el repositorio.
