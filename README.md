@@ -19,6 +19,7 @@ Descargar e instalar el directorio raiz el fichero <a href="https://drive.userco
 
 ```
 conda create -p ./conda python=3.10
+conda activate ./conda 
 pip install torch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
 ```
